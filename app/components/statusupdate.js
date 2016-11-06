@@ -1,8 +1,9 @@
 import React from 'react';
+import util from 'app/util.js';
 export default class StatusUpdate extends React.Component {
     render() {
-        return ( <
-            div >
+        return (
+          <div>
             <
             div className = "row" >
             <
@@ -14,10 +15,10 @@ export default class StatusUpdate extends React.Component {
             div className = "media-body" >
             <
             a href = "#" > {
-                this.props.author
+              this.props.author.fullName
             } < /a> <
             br / > {
-                this.props.postDate
+                util.unixTimeToString(this.props.postDate)
             }· {
                 this.props.location
             }· < span className = "glyphicon glyphicon-user" > < /span> < /
@@ -27,9 +28,8 @@ export default class StatusUpdate extends React.Component {
             div className = "col-md-2" >
             <
             span className = "caret pull-right" > < /span> < /
-            div > <
-            /div> <
-            div className = "row" >
+            div >
+            <div className = "row" >
             <
             div className = "col-md-12" > {
                 this.props.children
