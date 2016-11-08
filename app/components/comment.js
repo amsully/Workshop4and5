@@ -1,5 +1,5 @@
 import React from 'react';
-import util from 'app/util.js';
+import {unixTimeToString} from '../util';
 export default class Comment extends React.Component {
     render() {
         return ( <
@@ -14,7 +14,7 @@ export default class Comment extends React.Component {
                 this.props.author.fullName
             } < /a> {this.props.children} <
             br / > < a href = "#" > Like < /a> · <a href="#">Reply</a > ·{
-                util.unixTimeToString(this.props.postDate)
+                unixTimeToString(this.props.postDate)
             } <
             /div> < /
             div >
