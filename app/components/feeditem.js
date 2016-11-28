@@ -140,7 +140,10 @@ return liked;
                           return (
                           <Comment key={i}
                           author={comment.author}
-                          postDate={comment.postDate}>
+                          postDate={comment.postDate}
+                          feedItemId={this.state._id}
+                          commentIndex={i}
+                          data={comment}>
                           {comment.contents}
                           </Comment>
                           );
